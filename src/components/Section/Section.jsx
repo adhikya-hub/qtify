@@ -7,7 +7,7 @@ import TabAlbum from "../TabAlbum/TabAlbum"
 
 export default function Section({albumname,albumlist}){
 
-    const [toggle,setToggle]=useState("Show")
+    const [toggle,setToggle]=useState("Show All")
 
     if(albumname==="Songs"){
         return(
@@ -48,17 +48,17 @@ export default function Section({albumname,albumlist}){
           </Typography>
 
     <Button sx={{color:"#34C94B", textTransform: "none"}} onClick={()=>{
-        (toggle!=="Show") ? setToggle("Show") : setToggle("Collapse")
+        (toggle!=="Show All") ? setToggle("Show All") : setToggle("Collapse")
     }
     }>
 
-        {toggle==="Show"? "Show All" : "Collapse"}
+        {toggle==="Show All"? "Show All" : "Collapse"}
         
     </Button>
 
         </Box>
 
-{toggle==="Show" && 
+{toggle==="Show All" && 
     (<SwiperAlbum albumlist={albumlist}/>) }
 
 {toggle==="Collapse" && 

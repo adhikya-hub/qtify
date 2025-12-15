@@ -18,9 +18,18 @@ const Home=()=>{
     const perfomApi=async ()=>{
 
         try{
-            const response= await axios.get("https://qtify-backend.labs.crio.do/albums/top")
-            const response2= await axios.get("https://qtify-backend.labs.crio.do/albums/new")
-            const response3= await axios.get("https://qtify-backend.labs.crio.do/songs")
+            
+            const api = axios.create({
+            baseURL: "https://qtify-backend.labs.crio.do",
+            });
+            const response = await api.get("/albums/top");
+            const response2 = await api.get("/albums/new");
+            const response3 = await api.get("/songs");
+
+
+            // const response= await axios.get("https://qtify-backend.labs.crio.do/albums/top")
+            // const response2= await axios.get("https://qtify-backend.labs.crio.do/albums/new")
+            // const response3= await axios.get("https://qtify-backend.labs.crio.do/songs")
             console.log("songs",response3.data)
             setTop(response.data)
             setNewal(response2.data)

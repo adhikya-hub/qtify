@@ -17,7 +17,7 @@ export default function Search({searchData}){
   size="small"
   variant="outlined"
   value={searchData || ""}
-  placeholder="Search for songs"
+  placeholder="search a song"
   name="search"
   sx={{border: "1.5px solid #000",
     borderRadius: "8px",

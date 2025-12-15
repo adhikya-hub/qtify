@@ -14,14 +14,14 @@ function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
       <Link to="/">
-      <Box sx={{px:"1rem"}}>
+      <Box >
         <Logo />
         </Box>
       </Link>
       <Search
         searchData={searchData}
       />
-      <Box sx={{px:"1rem"}}>
+      <Box >
       <ButtonC />
       </Box>
         
